@@ -1,6 +1,6 @@
 #!/bin/bash
 
-APP_DIR="../whanos-app"
+APP_DIR="./whanos-app"
 
 echo "Detect App Language"
 

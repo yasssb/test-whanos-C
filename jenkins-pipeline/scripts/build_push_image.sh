@@ -1,6 +1,6 @@
 #!/bin/bash
 
-APP_DIR="../whanos-app"
+APP_DIR="./whanos-app"
 DOCKER_REGISTRY="us-central1-docker.pkg.dev/whanos-443406/whanos"
 APP_NAME="whanos-app"
 

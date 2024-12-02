@@ -20,7 +20,7 @@ pipeline {
         stage('Detect Language') {
             steps {
                 sh '''
-                chmod +x scripts/detect_lang.sh
+                chmod +x jenkins-pipeline/scripts/detect_lang.sh
                 ./scripts/detect_lang.sh > language.txt
                 '''
             }
@@ -29,7 +29,7 @@ pipeline {
         stage('Copy Dockerfile') {
             steps {
                 sh '''
-                chmod +x scripts/copy_dockerfile.sh
+                chmod +x jenkins-pipeline/scripts/copy_dockerfile.sh
                 ./scripts/copy_dockerfile.sh
                 '''
             }
@@ -38,7 +38,7 @@ pipeline {
         stage('Build and Push Docker Image') {
             steps {
                 sh '''
-                chmod +x scripts/build_and_push.sh
+                chmod +x jenkins-pipeline/scripts/build_and_push.sh
                 ./scripts/build_and_push.sh
                 '''
             }

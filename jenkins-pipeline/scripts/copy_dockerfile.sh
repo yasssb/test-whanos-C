@@ -1,7 +1,7 @@
 #!/bin/bash
 
-APP_DIR="../whanos-app"
-DOCKER_DIR="../images"
+APP_DIR="./whanos-app"
+DOCKER_DIR="./images"
 
 LANGUAGE=$(./detect_lang.sh)
 
