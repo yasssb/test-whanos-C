@@ -39,7 +39,7 @@ pipeline {
             steps {
                 sh '''
                 chmod +x jenkins-pipeline/scripts/build_and_push.sh
-                ./jenkins-pipeline/scripts/build_and_push.sh
+                ./jenkins-pipeline/scripts/build_push_image.sh
                 '''
             }
         }

@@ -3,7 +3,7 @@
 APP_DIR="./whanos-app"
 DOCKER_DIR="./images"
 
-LANGUAGE=$(./detect_lang.sh)
+LANGUAGE=$(./jenkins-pipeline/scripts/detect_lang.sh)
 
 echo "Detected language: $LANGUAGE"
 
