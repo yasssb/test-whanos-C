@@ -2,19 +2,18 @@ pipeline {
     agent any
 
     environment {
-        APP_DIR = "../whanos-app"
         DOCKER_REGISTRY = "us-central1-docker.pkg.dev/whanos-443406/whanos"
-        APP_NAME = "whanos-app"
+        KUBECONFIG = credentials('kubeconfig-credential')
     }
 
-    options {
-        pollSCM('H H * * *')
+    triggers {
+        pollSCM('H H * * *') 
     }
 
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', credentialsId: 'github-pat', url: 'https://github.com/EpitechPromo2027/B-DOP-500-PAR-5-1-whanos-johana.gaba.git'
+                git branch: 'main', credentialsId: 'github-pat', url: 'https://github.com/yasssb/test-whanos-C.git'
             }
         }
 
@@ -40,7 +39,7 @@ pipeline {
             steps {
                 sh '''
                 chmod +x scripts/build_and_push.sh
-                ./build_and_push.sh
+                ./scripts/build_and_push.sh
                 '''
             }
         }
