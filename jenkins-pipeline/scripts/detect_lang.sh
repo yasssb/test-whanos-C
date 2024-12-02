@@ -2,9 +2,6 @@
 
 APP_DIR="./whanos-app"
 
-echo "Detect App Language"
-
-
 if [ -f "$APP_DIR/Makefile" ]; then
     echo "c"
 elif [ -f "$APP_DIR/pom.xml" ]; then
