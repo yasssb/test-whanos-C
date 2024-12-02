@@ -21,7 +21,7 @@ pipeline {
             steps {
                 sh '''
                 chmod +x jenkins-pipeline/scripts/detect_lang.sh
-                ./scripts/detect_lang.sh > language.txt
+                ./jenkins-pipeline/scripts/detect_lang.sh > language.txt
                 '''
             }
         }
@@ -30,7 +30,7 @@ pipeline {
             steps {
                 sh '''
                 chmod +x jenkins-pipeline/scripts/copy_dockerfile.sh
-                ./scripts/copy_dockerfile.sh
+                ./jenkins-pipeline/scripts/copy_dockerfile.sh
                 '''
             }
         }
@@ -39,7 +39,7 @@ pipeline {
             steps {
                 sh '''
                 chmod +x jenkins-pipeline/scripts/build_and_push.sh
-                ./scripts/build_and_push.sh
+                ./jenkins-pipeline/scripts/build_and_push.sh
                 '''
             }
         }
